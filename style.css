@@ -18,3 +18,9 @@ a {
     background-color: #343a40;
     color: whitesmoke
 }
+h5 {
+    font-weight: bolder
+}
+hr {
+    border-color: whitesmoke
+}
