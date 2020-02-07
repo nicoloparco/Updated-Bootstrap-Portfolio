@@ -6,16 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Cambay|Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/49189ef982.js" crossorigin="anonymous"></script>
     <title>Portfolio Page</title>
 </head>
-<body>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <ul class="nav nav-pills">
+<body data-spy="scroll" data-target="#navbar" data-offset="50" id="navbarSpy">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand"><h5>N. L.</h5></a>
+        <ul class="nav nav-pills ml-auto justify-content-center">
             <li class="nav-item">
             <a class="nav-link" href="#aboutMe">About Me</a>
             </li>
@@ -27,8 +28,12 @@
             </li>
         </ul>
     </nav>
+    
+    <div class="row" id="spacer">
+     <p> </p>
+    </div>
 
-    <div data-spy="scroll" data-target="#navbar" data-offset="0">
+    <div>
         
         <div class="my-5" id="aboutMe">
             <h3 class="text-center mx-5 mb-3">ABOUT ME</h3>
@@ -54,7 +59,6 @@
                             <li>NodeJS</li>
                         </div>
                     </div>
-                   
                 </div>
                 <div class="col-md-4 text-right">
                     <img src="assets/profile-pic.jpeg" class="img-fluid border border-dark rounded my-3 mx-3">
@@ -63,9 +67,9 @@
             
         </div>
         
-        <div class="my-5 border border-dark rounded" id="portfolio">
+        <div class="my-5" id="portfolio">
             <h3 class="text-center my-5">PORTFOLIO</h3>
-            <div class="row">
+            <div class="row my-3">
                 <div class="col-md-3 ml-3">
                         <div id="list-example" class="list-group">
                             <a class="list-group-item list-group-item-action" href="#list-item-1">SportsHub</a>
@@ -74,16 +78,15 @@
                             <a class="list-group-item list-group-item-action" href="#list-item-4">Crystal Collector Game</a>
                             <a class="list-group-item list-group-item-action" href="#list-item-5">Friend Finder</a>
                             <a class="list-group-item list-group-item-action" href="#list-item-6">CLI Shopper</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-7">Node Word Guesser</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-8">LIRI Bot</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-9">Trivia Game</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-10">GIPHY API App</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-7">LIRI Bot</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-8">Trivia Game</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-9">GIPHY API App</a>
                         </div>
                 </div>
-                <div class="col-md-8 text-right">
-                    <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+                <div class="col-md-8 text-right" id="projects">
+                    <div data-spy="scroll" data-target="#list-example" data-offset="50" class="scrollspy-example">
                         
-                        <div class="container border border-dark rounded my-3">
+                        <div class="container my-3">
                             <a href="https://github.com/nicoloparco/bootcamp-final-project"><h4 id="list-item-1">SportsHub</h4></a>
                             <div class="row">
                                 <div class="col-md-4">
@@ -97,7 +100,7 @@
                             </div> 
                         </div>
                         <hr>
-                        <div class="container border border-dark rounded my-3">
+                        <div class="container my-3">
                             <a href="https://burger-mysql-nl.herokuapp.com/"><h4 id="list-item-2">Burger App</h4></a>
                             <div class="row">
                                 <div class="col-md-4">
@@ -112,20 +115,21 @@
                             </div> 
                         </div>
                         <hr>
-                        <div class="container border border-dark rounded my-3">
+                        <div class="container my-3">
                             <a href="https://github.com/nicoloparco/Mongoose-Scraper"><h4 id="list-item-3">Mongoose Scraper</h4></a>
                             <div class="row">
                                 <div class="col-md-4">
                                     <img src="./assets/newspaper.jpeg" alt="Mongoose Scraper" class="my-3 img-thumbnail">
                                 </div>
                                 <div class="col-md-8">
+                                    <p>ONGOING PROJECT</p>
                                     <p>A Mongo based app that scrapes the web for news articles and displays them for the client.</p>
                                     <p>Tech Used: JavaScript, MongoDB/Mongoose, ExpressJS, NodeJs, Handlebars, HTML, CSS</p>
                                 </div>
                             </div> 
                         </div>
                         <hr>
-                        <div class="container border border-dark rounded my-3">
+                        <div class="container my-3">
                             <a href="https://nicoloparco.github.io/Crystal-Collector-Game/"><h4 id="list-item-4">Crystal Collector Game</h4></a>
                             <div class="row">
                                 <div class="col-md-4">
@@ -140,7 +144,7 @@
                             </div> 
                         </div>
                         <hr>
-                        <div class="container border border-dark rounded my-3">
+                        <div class="container my-3">
                             <a href="https://github.com/nicoloparco/Friend-Finder"><h4 id="list-item-5">Friend Finder</h4></a>
                             <div class="row">
                                 <div class="col-md-4">
@@ -153,102 +157,86 @@
                             </div> 
                         </div>
                         <hr>
-                        <div class="container border border-dark rounded my-3">
+                        <div class="container my-3">
                             <a href="https://github.com/nicoloparco/MySQL-App"><h4 id="list-item-6">CLI Shopper</h4></a>
                             <div class="row">
                                 <div class="col-md-4">
                                     <img src="./assets/shoppingcart-1066110386.jpg" alt="CLI Shopper" class="my-3 img-thumbnail">
                                 </div>
                                 <div class="col-md-8">
-                                    <p>Description</p>
+                                    <p>A MySQL CLI app that simulates a user shopping experience through interaction with a data table of products. Whenever the user selects a product to "buy" the product table is updated.</p>
+                                    <p>Tech Used: JavaScript, MySQL, NodeJS</p>
                                 </div>
                             </div> 
                         </div>
                         <hr>
-                        <div class="container border border-dark rounded my-3">
-                            <a href="https://github.com/nicoloparco/NodeJS-Word-Guess-Game"><h4 id="list-item-7">Node Word Guesser</h4></a>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="./assets/wordguess.jpeg" alt="Node Word Guess Game" class="my-3 img-thumbnail">
-                                </div>
-                                <div class="col-md-8">
-                                    <p>Description</p>
-                                </div>
-                            </div> 
-                        </div>
-                        <hr>
-                        <div class="container border border-dark rounded my-3">
-                            <a href="https://github.com/nicoloparco/LIRI-bot"><h4 id="list-item-8">LIRI Bot</h4></a>
+                        <div class="container my-3">
+                            <a href="https://github.com/nicoloparco/LIRI-bot"><h4 id="list-item-7">LIRI Bot</h4></a>
                             <div class="row">
                                 <div class="col-md-4">
                                     <img src="./assets/spotify.png" alt="LIRI Bot" class="my-3 img-thumbnail">
                                 </div>
                                 <div class="col-md-8">
-                                    <p>Description</p>
+                                    <p>A NodeJS CLI app that accesses three different API's to return data to the user. The Spotify, BandsInTown, and OMBD API's are all used to return song, artist, and movie data.</p>
+                                    <p>Tech Used: JavaScript, NodeJS</p>
                                 </div>
                             </div> 
                         </div>
                         <hr>
-                        <div class="container border border-dark rounded my-3">
-                            <a href="https://nicoloparco.github.io/Trivia-Game/"><h4 id="list-item-9">Trivia Game</h4></a>
+                        <div class="container my-3">
+                            <a href="https://nicoloparco.github.io/Trivia-Game/"><h4 id="list-item-8">Trivia Game</h4></a>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img src="./assets/Trivia-Game-Background.jpg" alt="LIRI Bot" class="my-3 img-thumbnail">
+                                    <img src="./assets/Trivia-Game-Background.jpg" alt="Trivia Game" class="my-3 img-thumbnail">
                                 </div>
                                 <div class="col-md-8">
-                                    <p>Description</p>
+                                    <p>An 80's themed JavaScript based trivia game in which the user answers a series of questions each with a 30 second timer. Correct answers receive their own set of responses and images while negative responses receive a different set of responses and images.</p>
+                                    <p>Tech Used: JavaScript, JQuery, HTML, CSS</p>
                                     <a href="https://github.com/nicoloparco/Trivia-Game"><h4 id="list-item-9">GitHub Repo</h4></a>
                                 </div>
                             </div> 
                         </div>
                         <hr>
-                        <div class="container border border-dark rounded my-3">
-                            <a href="https://nicoloparco.github.io/GIPHY-API-App/"><h4 id="list-item-10">GIPHY API App</h4></a>
+                        <div class="container my-3">
+                            <a href="https://nicoloparco.github.io/GIPHY-API-App/"><h4 id="list-item-9">GIPHY API App</h4></a>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img src="./assets/giphy.png" alt="LIRI Bot" class="my-3 img-thumbnail">
+                                    <img src="./assets/giphy.png" alt="GIPHY API" class="my-3 img-thumbnail">
                                 </div>
                                 <div class="col-md-8">
-                                    <p>Description</p>
+                                    <p>An app that accesses the GIPHY API to provide users gifs related to either a default set of buttons or dynamically generated ones through a searchbar. Default buttons include several TV shows.</p>
+                                    <p>Tech Used: JavaScript, JQuery, HTML, CSS</p>
                                     <a href="https://github.com/nicoloparco/GIPHY-API-App"><h4 id="list-item-10">GIPHY API App</h4></a>
                                 </div>
                             </div> 
                         </div>
-                        
-                        
-                        
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="my-5" id="contact">
+            <div id="contact">
                 <h3 class="text-center">CONTACT</h3>
-              <div class="row my-5 justify-content-between">
-                  <div class="col-md-2 ml-5">
-                      <h5>EMAIL</h5>
-                      <a href="mailto:nicoloparco754@gmail.com?subject=Contact">nicoloparco75@gmail.com</a>
-                  </div>
-                  <div class="col-md-2 mx-3">
-                      <h5>PHONE</h5>
-                      <p>305-903-5503</p>
-                  </div>
-                  <div class="col-md-2 mx-3">
-                      <h5>LinkedIn</h5>
-                      <a href="https://www.linkedin.com/in/nicolas-loparco-040989141/">https://www.linkedin.com/in/nicolas-loparco-040989141/</a>
-                  </div>
-                  <div class="col-md-2 mr-5">
-                      <h5>GitHub</h5>
-                      <a href="https://github.com/nicoloparco">https://github.com/nicoloparco</a>
-                  </div>
-              </div>
+            <div class="row my-5 justify-content-between">
+                <div class="col-md-2 ml-5">
+                    <h5>EMAIL</h5>
+                    <a href="mailto:nicoloparco754@gmail.com?subject=Contact">nicoloparco75@gmail.com</a>
+                </div>
+                <div class="col-md-2 mx-3">
+                    <h5>PHONE</h5>
+                    <p>305-903-5503</p>
+                </div>
+                <div class="col-md-2 mx-3">
+                    <h5>LinkedIn</h5>
+                    <a href="https://www.linkedin.com/in/nicolas-loparco-040989141/">https://www.linkedin.com/in/nicolas-loparco-040989141/</a>
+                </div>
+                <div class="col-md-2 mr-5">
+                    <h5>GitHub</h5>
+                    <a href="https://github.com/nicoloparco">https://github.com/nicoloparco</a>
+                </div>
             </div>
-        
-        
-        
-        
-        
+            </div>
+            
         </div>
-
 </body>
 </html>
